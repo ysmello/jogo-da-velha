@@ -2,10 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import './css/index.css';
-import ShoppingList from './components/ShoppingList'
+import Board from './components/Board'
 
 ReactDOM.render(
-    <ShoppingList name="Yuri"/>, 
+    <React.Fragment>
+        <Board />
+    </React.Fragment>, 
     document.getElementById('root')
 );
 
