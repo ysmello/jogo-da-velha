@@ -9,6 +9,12 @@ class Board extends Component {
         }
     }
 
+    handleClick(i) {
+        const squares = this.state.squares.slice()
+        squares[i] = 'X'
+        this.setState({squares: squares})
+    }
+
     renderSquare(i) {
         return (
             <Square 
