@@ -29,9 +29,8 @@ function calculateWinner(squares) {
             return squares[a]
         }
     }
+
     return null
-
 }
-
  
-export default Square;
+export { Square, calculateWinner }
