@@ -33,9 +33,15 @@ class Board extends Component {
 
     render() {
         const winner = calculateWinner(this.state.squares)
+        const square = this.state.squares
+        const returnResult = square.filter(e => {
+            return e
+        })
         let status;
         if (winner) {
             status = `Winner: ${winner}`
+        } else if (returnResult.length >= 9 && !winner) {
+            status = 'Empate!!'
         } else {
             status = `Next player:  ${this.state.xIsNext ? "X" : "O"}`
         }
